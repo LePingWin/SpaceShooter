@@ -13,10 +13,13 @@ public class Controls : MonoBehaviour {
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool onGround;
+    //public AudioClip jumpsound;
+    //AudioSource audio;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
+        //audio = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -54,7 +57,10 @@ public class Controls : MonoBehaviour {
         {
             if (onGround)
             {
+
+                //audio.PlayOneShot(jumpsound,1.0F);
                 rb.velocity = new Vector2(rb.velocity.x, jumpheight);
+
             }
             jump = false;
         }
