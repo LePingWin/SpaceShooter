@@ -31,5 +31,10 @@ public class Touch : MonoBehaviour {
 
         }
 
-    }
+        public void Jump()
+        {
+            player.jump = true;
+        }
+
+}
     
